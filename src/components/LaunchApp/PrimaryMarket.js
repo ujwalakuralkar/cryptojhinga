@@ -135,13 +135,13 @@ const Launch = () => {
                         </Row>
                         <Row class="form-input" style={{ textAlign: "left", width: "75%" }}>
 
-                            <Accordion style={{ paddingBottom: "10px" }} defaultActiveKey={['0']} alwaysOpen id="1">
-                                <Accordion.Item eventKey="0">
+                            <Accordion style={{ paddingBottom: "10px" }} defaultActiveKey={['0']} alwaysOpen id="1" >
+                                <Accordion.Item eventKey="0" style={{borderLeft: '1px solid gray'}}>
                                     {/* <Accordion.Header>1 JHINGA ≈ 1 Rs + Gas Fees</Accordion.Header> */}
-                                    <Accordion.Header onClick={handleAccordion}>{accordion === true ? "1 JHINGA ≈ 1 Rs + Gas Fees" : "Use Payment Method"}</Accordion.Header>
+                                    <Accordion.Header onClick={handleAccordion} >{accordion === true ? "1 JHINGA ≈ 1 Rs + Gas Fees" : "Use Payment Method"}</Accordion.Header>
                                     <Accordion.Body>
                                         <Accordion.Item eventKey="1">
-                                            <Accordion.Header>See Calculation</Accordion.Header>
+                                            <Accordion.Header >See Calculation</Accordion.Header>
                                             <Accordion.Body>
                                                 <li style={{ Color: "grey" }}>0.3% Blockchain Fee</li>
                                                 <li style={{ Color: "grey" }}>0.2% Convenience Fee</li>
@@ -173,7 +173,7 @@ const Launch = () => {
 
                     <div>
 
-                        <Button className="selectToken" variant="primary" style={{ width: "100%" }} onClick={handleShow1} >Connect Wallet</Button>
+                        <Button className="selectToken" variant="primary" style={{ width: "100%", height: "70px", borderRadius: "10px", fontSize: "18px" }} onClick={handleShow1} >Connect Wallet</Button>
                         <Modal show={show1} onHide={handleClose1}>
                             <Modal.Header closeButton >
                                 <Modal.Title style={{ fontSize: "20px", fontWeight: "bold", fontFamily: "revert" }}> Connect a Wallet</Modal.Title>
