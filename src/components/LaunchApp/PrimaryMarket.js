@@ -133,7 +133,9 @@ const Launch = () => {
                                 <p style={{ margin: "8px 0px" }}>{tradeType === "buy" ? <button className="selectToken" style={{ display: "contents" }} variant="primary" onClick={handleShow} ><div>{token === null ? '' : token}<img style={{ padding: "0 5px", height: "0.5em" }} src={DropdownImg} /></div></button> : <div style={{ display: "flex", maxHeight: "2.5em" }}><img style={{ height: "1.5em" }} src={jhinga} /><p>JHINGA</p> </div>}</p>
                             </Col>
                         </Row>
-                        <Row class="form-input" style={{ textAlign: "left", width: "75%" }}>
+                        <Row class="form-input" style={{ textAlign: "left", width: "100%" }}>
+
+                            <Col md={9}>
 
                             <Accordion style={{ paddingBottom: "10px" }} defaultActiveKey={['0']} alwaysOpen id="1" >
                                 <Accordion.Item eventKey="0" style={{borderLeft: '1px solid gray'}}>
@@ -153,6 +155,12 @@ const Launch = () => {
                                     </Accordion.Body>
                                 </Accordion.Item>
                             </Accordion>
+                            </Col>
+                            <Col md={3}>
+                            <div>
+                                <p>Payment</p>
+                            </div>
+                            </Col>
                         </Row>
 
                         <Row class="form-input" style={{ display: "flex", paddingBottom: "10px", width: "100%" }}>
