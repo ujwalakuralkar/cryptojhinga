@@ -1920,3 +1920,13 @@ ul.tree>li:first-child::after {
     border-radius: 5px;
     padding:2px 5px;
 } */
+
+.payment-item {
+    padding-top: 8px;
+    margin: 2px;
+    font-weight: 600;
+    font-family: system-ui;
+    font-size: 17px;
+    color: lightgrey;
+
+}

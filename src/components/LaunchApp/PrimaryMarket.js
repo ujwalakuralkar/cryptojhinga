@@ -21,7 +21,8 @@ import Metamask from "../../Assets1/metamask.png";
 import clover from "../../Assets1/clover.png";
 import fortmatic from "../../Assets1/Fortmatic.png";
 import binance from "../../Assets1/Path.png"
-import jhinga from "../../Assets1/jhinga.png"
+import jhinga from "../../Assets1/jhinga.png";
+import Payment from "../../Assets1/payment.png";
 
 import {
     Container,
@@ -157,8 +158,8 @@ const Launch = () => {
                             </Accordion>
                             </Col>
                             <Col md={3}>
-                            <div>
-                                <p>Payment</p>
+                            <div className="payment-item">
+                                <p>Payments <img src={Payment} /></p>
                             </div>
                             </Col>
                         </Row>
