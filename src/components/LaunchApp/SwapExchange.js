@@ -37,6 +37,8 @@ import apecoin from "../../Assets1/apecoin.png";
 import sandImg from "../../Assets1/sand.png";
 import dotL from '../../Assets1/Ellipse.png';
 import dot from '../../Assets1/Ellipse_s.png';
+import Payment from "../../Assets1/payment.png";
+import { BsChevronLeft } from "react-icons/bs";
 
 import {
     Container,
@@ -170,7 +172,7 @@ const Swap = () => {
                         <Row class="form-input" style={{ textAlign: "left", width: "75%" }}>
 
 
-                            <Col md={9}>
+                        <Col md={9}>
                             <Accordion style={{ paddingBottom: "10px" }} defaultActiveKey={['0']} alwaysOpen id="1">
                                     <Accordion.Item className="tree" eventKey="0">
                                         {/* <Accordion.Header>1 JHINGA ≈ 1 Rs + Gas Fees</Accordion.Header> */}
@@ -189,13 +191,12 @@ const Swap = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
                                    
-
                                 </Accordion>
-                            </Col>
+                                </Col>
                             <Col md={3}>
-                                <div>
-                                
-                                </div>
+                            <div className="payment-item">
+                                <p><BsChevronLeft/> Payments <img style={{marginLeft:"1.7px"}}src={Payment} /></p>
+                            </div>
                             </Col>
 
                         </Row>
@@ -300,7 +301,7 @@ const Swap = () => {
 
                                 <div className="SwapItem2 " style={{}}>
                                     <div style={{ display: "flex" }}>
-                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={usdtImg} /> <p onClick={() => setToken(`<img src={${usdtImg}} /> USDT`)} style={{ margin: "2px", color:"#4FA183"}}>USDT</p>
+                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={usdtImg} /> <p onClick={() => setToken("USDT")} style={{ margin: "2px", color:"#4FA183"}}>USDT</p>
                                     </div>
                                 </div>
                                 <div className="SwapItem2">
