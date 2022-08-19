@@ -31,7 +31,12 @@ import etcImg from '../../Assets1/Rectangle 226.png';
 import solanaImg from "../../Assets1/solana.png";
 import BNBimg from "../../Assets1/BNB.png";
 import wrxImg from "../../Assets1/wrx.png";
-import maticImg from "../../Assets1/matic.png"
+import maticImg from "../../Assets1/matic.png";
+import ManaImg from "../../Assets1/mana.png";
+import apecoin from "../../Assets1/apecoin.png";
+import sandImg from "../../Assets1/sand.png";
+import dotL from '../../Assets1/Ellipse.png';
+import dot from '../../Assets1/Ellipse_s.png';
 
 import {
     Container,
@@ -166,55 +171,26 @@ const Swap = () => {
 
 
                             <Col md={9}>
-                                <Accordion style={{ paddingBottom: "10px" }} defaultActiveKey={['0']} alwaysOpen id="1">
-                                    <Accordion.Item className="tree" eventKey="0" style={{ borderLeft: '1px solid gray' }}>
+                            <Accordion style={{ paddingBottom: "10px" }} defaultActiveKey={['0']} alwaysOpen id="1">
+                                    <Accordion.Item className="tree" eventKey="0">
                                         {/* <Accordion.Header>1 JHINGA ≈ 1 Rs + Gas Fees</Accordion.Header> */}
-                                        <Accordion.Header className="tree-item" onClick={handleAccordion}><img style={{ margin: "5px" }} src={daiImg} />{accordion === true ? "1 JHINGA ≈ 1 Rs + Gas Fees" : "Use Payment Method"}</Accordion.Header>
-                                        <Accordion.Body>
+                                        <Accordion.Header className="tree-item" onClick={handleAccordion}><img style={{ margin: "5px",height:"20px" }} src={dotL} />{accordion === true ? "1 JHINGA ≈ 1 Rs + Gas Fees" : "Use Payment Method"}</Accordion.Header>
+                                        <Accordion.Body className="main-body-accordion">
                                             <Accordion.Item eventKey="1">
-                                                <Accordion.Header className="tree-item"><img style={{ margin: "5px" }} src={daiImg} />See Calculation</Accordion.Header>
+                                                <Accordion.Header className="tree-item"><img style={{ margin: "5px",height:"20px" }} src={dotL} />See Calculation</Accordion.Header>
                                                 <Accordion.Body>
-                                                    <p className="tree-item" style={{ Color: "grey" }}><img style={{ margin: "5px" }} src={daiImg} />0.3% Blockchain Fee</p>
-                                                    <p className="tree-item" style={{ Color: "grey" }}><img style={{ margin: "5px" }} src={daiImg} />0.2% Convenience Fee</p>
+                                                    <p className="tree-item" style={{ Color: "grey" }}><img style={{ margin: "5px" }} src={dot} />0.3% Blockchain Fee</p>
+                                                    <p className="tree-item" style={{ Color: "grey" }}><img style={{ margin: "5px" }} src={dot} />0.2% Convenience Fee</p>
                                                 </Accordion.Body>
                                             </Accordion.Item>
-                                            <p className="tree-item"><img style={{ margin: "5px" }} src={daiImg} />1.05 Rs <p style={{ Color: "grey" }}>Total Fees</p></p>
-                                            <p className="tree-item"><img style={{ margin: "5px" }} src={daiImg} />1 JHINGA ≈ 1 Rs + Gas Fees <p style={{ Color: "grey" }}>Rate</p></p>
+                                            <p className="tree-item"><img style={{ margin: "5px",height:"20px" }} src={dotL} />1.05 Rs <p style={{ Color: "grey" }}>Total Fees</p></p>
+                                            <p className="tree-item"><img style={{ margin: "5px",height:"20px" }} src={dotL} />1 JHINGA ≈ 1 Rs + Gas Fees <p style={{ Color: "grey" }}>Rate</p></p>
 
                                         </Accordion.Body>
                                     </Accordion.Item>
-                                    <Accordion.Item eventKey="0">
-
-                                        <ul class="tree">
-                                            <li className="tree-header"  ><Accordion.Header onClick={handleAccordion}><img style={{ margin: "5px" }} src={daiImg} />{accordion === true ? "1 JHINGA ≈ 1 Rs + Gas Fees" : "Use Payment Method"}</Accordion.Header></li>
-                                            <Accordion.Body>
-                                                <li><img style={{ margin: "5px" }} src={daiImg} />1.05 Rs <p style={{ Color: "grey" }}>Total Fees</p></li>
-                                                <li><img style={{ margin: "5px" }} src={daiImg} />1 JHINGA ≈ 1 Rs + Gas Fees <p style={{ Color: "grey" }}>Rate</p></li>
-                                            </Accordion.Body>
-                                            <li><a>Parent 2</a></li>
-                                            <li>
-                                                <a>Parent 3</a>
-                                                <ul>
-                                                    <li>
-                                                        <a>1st Child of 3</a>
-                                                        <ul>
-                                                            <li><a>1st grandchild</a></li>
-                                                            <li><a>2nd grandchild</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a>2nd Child of 3</a></li>
-                                                    <li><a>3rd Child of 3</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a>Parent 4</a>
-                                                <ul><li><a>Parent 4's only child</a></li></ul>
-                                            </li>
-                                        </ul>
-                                    </Accordion.Item>
+                                   
 
                                 </Accordion>
-
                             </Col>
                             <Col md={3}>
                                 <div>
@@ -324,17 +300,17 @@ const Swap = () => {
 
                                 <div className="SwapItem2 " style={{}}>
                                     <div style={{ display: "flex" }}>
-                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={usdtImg} /> <p onClick={() => setToken('USDT')} style={{ margin: "2px" }}>USDT</p>
+                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={usdtImg} /> <p onClick={() => setToken(`<img src={${usdtImg}} /> USDT`)} style={{ margin: "2px", color:"#4FA183"}}>USDT</p>
                                     </div>
                                 </div>
                                 <div className="SwapItem2">
                                     <div style={{ display: "flex" }}>
-                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={usdcImg} /> <p onClick={() => setToken('USDC')} style={{ margin: "2px" }}>USDC</p>
+                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={usdcImg} /> <p onClick={() => setToken('USDC')} style={{ margin: "2px", color:"#3275C6" }}>USDC</p>
                                     </div>
                                 </div>
                                 <div className="SwapItem2">
                                     <div style={{ display: "flex" }}>
-                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={busdImg} /> <p onClick={() => setToken('BUSD')} style={{ margin: "2px" }}>BUSD</p>
+                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={busdImg} /> <p onClick={() => setToken('BUSD')} style={{ margin: "2px", color:"#EEA92C" }}>BUSD</p>
                                     </div>
                                 </div>
 
@@ -344,22 +320,22 @@ const Swap = () => {
 
                             <Container>
                                 <Row style={{ display: "flex", maxHeight: "20px" }} onClick={() => setToken('USDT')} >
-                                    <Col md={4} className="SwapIcon1"><img style={{ height: "1.5em", margin: "2px 5px" }} src={usdtImg} />USDT</Col>
+                                    <Col md={4} className="SwapIcon1"style={{color:"#4FA183"}}><img style={{ height: "1.5em", margin: "2px 5px" }} src={usdtImg} />USDT</Col>
                                     <Col md={6} className="text1">Tether</Col>
                                 </Row>
                                 <hr style={{ width: '420px', marginLeft: "10px" }} />
                                 <Row style={{ display: "flex", maxHeight: "20px" }} onClick={() => setToken('USDC')}>
-                                    <Col md={4} className="SwapIcon1"><img style={{ height: "1.5em", margin: "2px 5px" }} src={usdcImg} />USDC</Col>
+                                    <Col md={4} className="SwapIcon1" style={{color:"#3275C6"}}><img style={{ height: "1.5em", margin: "2px 5px" }} src={usdcImg} />USDC</Col>
                                     <Col md={6} className="text1">United States Dollar Coin </Col>
                                 </Row>
                                 <hr style={{ width: '420px', marginLeft: "10px" }} />
                                 <Row style={{ display: "flex", maxHeight: "20px" }} onClick={() => setToken('BUSD')}>
-                                    <Col md={4} className="SwapIcon1"><img style={{ height: "1.5em", margin: "2px 5px" }} src={busdImg} />BUSD</Col>
+                                    <Col md={4} className="SwapIcon1" style={{color:"#EEA92C"}}><img style={{ height: "1.5em", margin: "2px 5px" }} src={busdImg} />BUSD</Col>
                                     <Col md={6} className="text1">Binance </Col>
                                 </Row>
                                 <hr style={{ width: '420px', marginLeft: "10px" }} />
                                 <Row style={{ display: "flex", maxHeight: "20px" }} onClick={() => setToken('DAI')}>
-                                    <Col md={4} className="SwapIcon1"><img style={{ height: "1.5em", margin: "2px 5px" }} src={daiImg} />DAI</Col>
+                                    <Col md={4} className="SwapIcon1" style={{color:"#F2AC47"}}><img style={{ height: "1.5em", margin: "2px 5px" }} src={daiImg} />DAI</Col>
                                     <Col md={6} className="text1">Dai </Col>
                                 </Row>
 
@@ -384,17 +360,17 @@ const Swap = () => {
 
                                 <div className="SwapItem2">
                                     <div style={{ display: "flex" }}>
-                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={EurImg} /> <p onClick={() => setToken('MANA')} style={{ margin: "2px" }}>MANA</p>
+                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={ManaImg} /> <p onClick={() => setToken('MANA')} style={{ margin: "2px", color:"#DD2975" }}>MANA</p>
                                     </div>
                                 </div>
                                 <div className="SwapItem2">
                                     <div style={{ display: "flex" }}>
-                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={EurImg} /> <p onClick={() => setToken('APE')} style={{ margin: "2px" }}>APE</p>
+                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={apecoin} /> <p onClick={() => setToken('APE')} style={{ margin: "2px" ,color:"#1143B6"}}>APE</p>
                                     </div>
                                 </div>
                                 <div className="SwapItem2">
                                     <div style={{ display: "flex" }}>
-                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={EurImg} /> <p onClick={() => setToken('SAND')} style={{ margin: "2px" }}>SAND</p>
+                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={sandImg} /> <p onClick={() => setToken('SAND')} style={{ margin: "2px",color:"#00A1F3"}}>SAND</p>
                                     </div>
                                 </div>
 
@@ -404,17 +380,17 @@ const Swap = () => {
 
                             <Container>
                                 <Row style={{ display: "flex", maxHeight: "20px" }} onClick={() => setToken('MANA')} >
-                                    <Col md={4} className="SwapIcon1"><img style={{ height: "1.5em", margin: "2px 5px" }} src={IndImg} />MANA</Col>
+                                    <Col md={4} className="SwapIcon1" style={{color:"#DD2975"}}><img style={{ height: "1.5em", margin: "2px 5px" }} src={ManaImg} />MANA</Col>
                                     <Col md={6} className="text1">Decentaland</Col>
                                 </Row>
                                 <hr style={{ width: '420px', marginLeft: "10px" }} />
                                 <Row style={{ display: "flex", maxHeight: "20px" }} onClick={() => setToken('APE')}>
-                                    <Col md={4} className="SwapIcon1"><img style={{ height: "1.5em", margin: "2px 5px" }} src={UsdImg} />APE</Col>
+                                    <Col md={4} className="SwapIcon1" style={{color:"#1143B6"}}><img style={{ height: "1.5em", margin: "2px 5px" }} src={apecoin} />APE</Col>
                                     <Col md={6} className="text1">ApeCoin </Col>
                                 </Row>
                                 <hr style={{ width: '420px', marginLeft: "10px" }} />
                                 <Row style={{ display: "flex", maxHeight: "20px" }} onClick={() => setToken('SAND')}>
-                                    <Col md={4} className="SwapIcon1"><img style={{ height: "1.5em", margin: "2px 5px" }} src={UsdImg} />SAND</Col>
+                                    <Col md={4} className="SwapIcon1" style={{color:"#00A1F3"}}><img style={{ height: "1.5em", margin: "2px 5px" }} src={sandImg} />SAND</Col>
                                     <Col md={6} className="text1">The Sandbox </Col>
                                 </Row>
 
@@ -439,17 +415,17 @@ const Swap = () => {
 
                                 <div className="SwapItem2">
                                     <div style={{ display: "flex" }}>
-                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={wbtcImf} /> <p onClick={() => setToken('WBTC')} style={{ margin: "2px" }}>WBTC</p>
+                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={wbtcImf} /> <p onClick={() => setToken('WBTC')} style={{ margin: "2px",color:"#EE9956" }}>WBTC</p>
                                     </div>
                                 </div>
                                 <div className="SwapItem2">
                                     <div style={{ display: "flex" }}>
-                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={etcImg} /> <p onClick={() => setToken('ETH')} style={{ margin: "2px", color: "grey", }}>ETH</p>
+                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={etcImg} /> <p onClick={() => setToken('ETH')} style={{ margin: "2px", color: "#4C557B", }}>ETH</p>
                                     </div>
                                 </div>
                                 <div className="SwapItem2">
                                     <div style={{ display: "flex" }}>
-                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={BNBimg} /> <p onClick={() => setToken('BNB')} style={{ margin: "2px", color: "orange" }}>BNB</p>
+                                        <img style={{ height: "1.5em", margin: "0px 7px" }} src={BNBimg} /> <p onClick={() => setToken('BNB')} style={{ margin: "2px", color: "#EEA92C" }}>BNB</p>
                                     </div>
                                 </div>
 
@@ -459,33 +435,33 @@ const Swap = () => {
 
                             <Container>
                                 <Row style={{ display: "flex", maxHeight: "20px" }} onClick={() => setToken('WBTC')} >
-                                    <Col md={4} className="SwapIcon1" style={{ color: "orange" }}><img style={{ height: "1.5em", margin: "2px 5px" }} src={wbtcImf} />WBTC</Col>
+                                    <Col md={4} className="SwapIcon1" style={{ color: "#EE9956" }}><img style={{ height: "1.5em", margin: "2px 5px" }} src={wbtcImf} />WBTC</Col>
                                     <Col md={6} className="text1">Wrapped Bitcoin</Col>
                                 </Row>
                                 <hr style={{ width: '420px', marginLeft: "10px" }} />
                                 <Row style={{ display: "flex", maxHeight: "20px" }} onClick={() => setToken('ETH')}>
-                                    <Col md={4} className="SwapIcon1" style={{ color: "grey" }}><img style={{ height: "1.5em", margin: "2px 5px" }} src={etcImg} />ETH</Col>
+                                    <Col md={4} className="SwapIcon1" style={{ color: "#4C557B" }}><img style={{ height: "1.5em", margin: "2px 5px" }} src={etcImg} />ETH</Col>
                                     <Col md={6} className="text1">Ether </Col>
                                 </Row>
                                 <hr style={{ width: '420px', marginLeft: "10px" }} />
                                 <Row style={{ display: "flex", maxHeight: "20px" }} onClick={() => setToken('wSolana')}>
-                                    <Col md={4} className="SwapIcon1" style={{ color: 'purple' }}><img style={{ height: "1.5em", margin: "2px 5px" }} src={solanaImg} />wSolana</Col>
+                                    <Col md={4} className="SwapIcon1" style={{ color: '#8E8CD9' }}><img style={{ height: "1.5em", margin: "2px 5px" }} src={solanaImg} />wSolana</Col>
                                     <Col md={6} className="text1">wrapped solana </Col>
                                 </Row>
 
                                 <hr style={{ width: '420px', marginLeft: "10px" }} />
                                 <Row style={{ display: "flex", maxHeight: "20px" }} onClick={() => setToken('BNB')}>
-                                    <Col md={4} className="SwapIcon3" style={{ color: "orange" }}><img style={{ height: "1.5em", margin: "2px 5px" }} src={BNBimg} /> BNB </Col>
+                                    <Col md={4} className="SwapIcon3" style={{ color: "#EEA92C" }}><img style={{ height: "1.5em", margin: "2px 5px" }} src={BNBimg} /> BNB </Col>
                                     <Col md={6} className="text1">Binance </Col>
                                 </Row>
                                 <hr style={{ width: '420px', marginLeft: "10px" }} />
                                 <Row style={{ display: "flex", maxHeight: "20px" }} onClick={() => setToken('WRX')}>
-                                    <Col md={4} className="SwapIcon3" style={{ color: 'blue' }}><img style={{ height: "1.5em", margin: "2px 5px" }} src={wrxImg} /> WRX </Col>
+                                    <Col md={4} className="SwapIcon3" style={{ color: '#4E77EC' }}><img style={{ height: "1.5em", margin: "2px 5px" }} src={wrxImg} /> WRX </Col>
                                     <Col md={6} className="text1">WazirX </Col>
                                 </Row>
                                 <hr style={{ width: '420px', marginLeft: "10px" }} />
                                 <Row style={{ display: "flex", maxHeight: "20px" }} onClick={() => setToken('Matic')}>
-                                    <Col md={4} className="SwapIcon3" style={{ color: 'color:rgb(92, 14, 92)' }}><img style={{ height: "1.5em", margin: "2px 5px" }} src={maticImg} /> Matic </Col>
+                                    <Col md={4} className="SwapIcon3" style={{ color: "#8245E0" }}><img style={{ height: "1.5em", margin: "2px 5px" }} src={maticImg} /> Matic </Col>
                                     <Col md={6} className="text1">Matic Coin </Col>
                                 </Row>
                             </Container>

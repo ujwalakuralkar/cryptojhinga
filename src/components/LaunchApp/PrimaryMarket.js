@@ -23,6 +23,7 @@ import fortmatic from "../../Assets1/Fortmatic.png";
 import binance from "../../Assets1/Path.png"
 import jhinga from "../../Assets1/jhinga.png";
 import Payment from "../../Assets1/payment.png";
+import { BsChevronLeft } from "react-icons/bs";
 
 import {
     Container,
@@ -159,7 +160,7 @@ const Launch = () => {
                             </Col>
                             <Col md={3}>
                             <div className="payment-item">
-                                <p>Payments <img src={Payment} /></p>
+                                <p><BsChevronLeft/> Payments <img style={{marginLeft:"1.7px"}}src={Payment} /></p>
                             </div>
                             </Col>
                         </Row>
