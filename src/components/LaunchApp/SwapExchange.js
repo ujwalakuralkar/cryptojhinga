@@ -26,6 +26,8 @@ import usdtImg from '../../Assets1/USDT.png';
 import usdcImg from "../../Assets1/USDC.png";
 import busdImg from "../../Assets1/BUSD.png";
 import daiImg from '../../Assets1/DAI.png';
+import dotL from '../../Assets1/Ellipse.png';
+import dot from '../../Assets1/Ellipse_s.png';
 import wbtcImf from '../../Assets1/WBTC.png';
 import etcImg from '../../Assets1/Rectangle 226.png';
 import solanaImg from "../../Assets1/solana.png";
@@ -165,57 +167,62 @@ const Swap = () => {
                         <Row class="form-input" style={{ textAlign: "left", width: "75%" }}>
 
 
+                            <Col md={9}>
+                                <Accordion style={{ paddingBottom: "10px" }} defaultActiveKey={['0']} alwaysOpen id="1">
+                                    <Accordion.Item className="tree" eventKey="0">
+                                        {/* <Accordion.Header>1 JHINGA ≈ 1 Rs + Gas Fees</Accordion.Header> */}
+                                        <Accordion.Header className="tree-item" onClick={handleAccordion}><img style={{ margin: "5px",height:"20px" }} src={dotL} />{accordion === true ? "1 JHINGA ≈ 1 Rs + Gas Fees" : "Use Payment Method"}</Accordion.Header>
+                                        <Accordion.Body className="main-body-accordion">
+                                            <Accordion.Item eventKey="1">
+                                                <Accordion.Header className="tree-item"><img style={{ margin: "5px",height:"20px" }} src={dotL} />See Calculation</Accordion.Header>
+                                                <Accordion.Body>
+                                                    <p className="tree-item" style={{ Color: "grey" }}><img style={{ margin: "5px" }} src={dot} />0.3% Blockchain Fee</p>
+                                                    <p className="tree-item" style={{ Color: "grey" }}><img style={{ margin: "5px" }} src={dot} />0.2% Convenience Fee</p>
+                                                </Accordion.Body>
+                                            </Accordion.Item>
+                                            <p className="tree-item"><img style={{ margin: "5px",height:"20px" }} src={dotL} />1.05 Rs <p style={{ Color: "grey" }}>Total Fees</p></p>
+                                            <p className="tree-item"><img style={{ margin: "5px",height:"20px" }} src={dotL} />1 JHINGA ≈ 1 Rs + Gas Fees <p style={{ Color: "grey" }}>Rate</p></p>
 
-                            <Accordion style={{ paddingBottom: "10px" }} defaultActiveKey={['0']} alwaysOpen id="1">
-                                <Accordion.Item className="tree" eventKey="0" style={{ borderLeft: '1px solid gray' }}>
-                                    {/* <Accordion.Header>1 JHINGA ≈ 1 Rs + Gas Fees</Accordion.Header> */}
-                                    <Accordion.Header className="tree-item" onClick={handleAccordion}><img style={{ margin: "5px" }} src={daiImg} />{accordion === true ? "1 JHINGA ≈ 1 Rs + Gas Fees" : "Use Payment Method"}</Accordion.Header>
-                                    <Accordion.Body>
-                                        <Accordion.Item eventKey="1">
-                                            <Accordion.Header className="tree-item"><img style={{ margin: "5px" }} src={daiImg} />See Calculation</Accordion.Header>
-                                            <Accordion.Body>
-                                                <p className="tree-item" style={{ Color: "grey" }}><img style={{ margin: "5px" }} src={daiImg} />0.3% Blockchain Fee</p>
-                                                <p className="tree-item" style={{ Color: "grey" }}><img style={{ margin: "5px" }} src={daiImg} />0.2% Convenience Fee</p>
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                        <p className="tree-item"><img style={{ margin: "5px" }} src={daiImg} />1.05 Rs <p style={{ Color: "grey" }}>Total Fees</p></p>
-                                        <p className="tree-item"><img style={{ margin: "5px" }} src={daiImg} />1 JHINGA ≈ 1 Rs + Gas Fees <p style={{ Color: "grey" }}>Rate</p></p>
-
-                                    </Accordion.Body>
-                                </Accordion.Item>
-                                <Accordion.Item  eventKey="0">
-
-                                    <ul class="tree">
-                                        <li className="tree-header"  ><Accordion.Header onClick={handleAccordion}><img style={{ margin: "5px" }} src={daiImg} />{accordion === true ? "1 JHINGA ≈ 1 Rs + Gas Fees" : "Use Payment Method"}</Accordion.Header></li>
-                                        <Accordion.Body>
-                                            <li><img style={{ margin: "5px" }} src={daiImg} />1.05 Rs <p style={{ Color: "grey" }}>Total Fees</p></li>
-                                            <li><img style={{ margin: "5px" }} src={daiImg} />1 JHINGA ≈ 1 Rs + Gas Fees <p style={{ Color: "grey" }}>Rate</p></li>
                                         </Accordion.Body>
-                                        <li><a>Parent 2</a></li>
-                                        <li>
-                                            <a>Parent 3</a>
-                                            <ul>
-                                                <li>
-                                                    <a>1st Child of 3</a>
-                                                    <ul>
-                                                        <li><a>1st grandchild</a></li>
-                                                        <li><a>2nd grandchild</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a>2nd Child of 3</a></li>
-                                                <li><a>3rd Child of 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a>Parent 4</a>
-                                            <ul><li><a>Parent 4's only child</a></li></ul>
-                                        </li>
-                                    </ul>
-                                </Accordion.Item>
+                                    </Accordion.Item>
+                                    {/* <Accordion.Item eventKey="0">
 
-                            </Accordion>
+                                        <ul class="tree">
+                                           <Accordion.Header className="tree-header" onClick={handleAccordion}><img style={{ margin: "5px" }} src={daiImg} />{accordion === true ? "1 JHINGA ≈ 1 Rs + Gas Fees" : "Use Payment Method"}</Accordion.Header>
+                                            <Accordion.Body>
+                                                <li><img style={{ margin: "5px" }} src={daiImg} />1.05 Rs <p style={{ Color: "grey" }}>Total Fees</p></li>
+                                                <li><img style={{ margin: "5px" }} src={daiImg} />1 JHINGA ≈ 1 Rs + Gas Fees <p style={{ Color: "grey" }}>Rate</p></li>
+                                            </Accordion.Body>
+                                            <li><a>Parent 2</a></li>
+                                            <li>
+                                                <a>Parent 3</a>
+                                                <ul>
+                                                    <li>
+                                                        <a>1st Child of 3</a>
+                                                        <ul>
+                                                            <li><a>1st grandchild</a></li>
+                                                            <li><a>2nd grandchild</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a>2nd Child of 3</a></li>
+                                                    <li><a>3rd Child of 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a>Parent 4</a>
+                                                <ul><li><a>Parent 4's only child</a></li></ul>
+                                            </li>
+                                        </ul>
+                                    </Accordion.Item> */}
 
+                                </Accordion>
 
+                            </Col>
+                            <Col md={3}>
+                                <div>
+
+                                </div>
+                            </Col>
 
                         </Row>
                         <Row class="form-input" style={{ display: "flex", paddingBottom: "10px", width: "100%" }}>
