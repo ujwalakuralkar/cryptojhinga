@@ -63,6 +63,7 @@ const Swap = () => {
     const [showtab, setShowTab] = useState(1);
     const [currentVal, setCurrentVal] = useState("");
     const [accordion, setAccordion] = useState(false);
+    const [accordion1, setAccordion1] = useState(false);
     const [show, setShow] = useState(false);
     const handleClose1 = () => setShow1(false);
     const handleShow1 = () => setShow1(true);
@@ -90,6 +91,15 @@ const Swap = () => {
             setAccordion(true);
         }
     }
+
+    function handleAccordion1(){
+        if(accordion1 === true){
+            setAccordion1(false);
+        } else {
+            setAccordion1(true);
+        }
+    }
+
 
     const onChange = (event) => {
         setValue(event.target.value);
@@ -169,24 +179,24 @@ const Swap = () => {
                                 <p style={{ margin: "8px 0px" }}>{tradeType === "buy" ? <button className="selectToken" style={{ display: "contents" }} variant="primary" onClick={handleShow1} ><div>{token === null ? '' : token}<img style={{ padding: "0 5px", height: "0.5em" }} src={DropdownImg} /></div></button> : <div style={{ display: "flex", maxHeight: "2.5em" }}><img style={{ height: "1.5em" }} src={jhinga} /><p>JHINGA</p> </div>}</p>
                             </Col>
                         </Row>
-                        <Row class="form-input" style={{ textAlign: "left", width: "75%" }}>
+                        <Row class="form-input" style={{ textAlign: "left"}}>
 
 
                         <Col md={9}>
                             <Accordion style={{ paddingBottom: "10px" }} defaultActiveKey={['0']} alwaysOpen id="1">
                                     <Accordion.Item className="tree" eventKey="0">
                                         {/* <Accordion.Header>1 JHINGA ≈ 1 Rs + Gas Fees</Accordion.Header> */}
-                                        <Accordion.Header className="tree-item" onClick={handleAccordion}><img style={{ margin: "5px",height:"20px" }} src={dotL} />{accordion === true ? "1 JHINGA ≈ 1 Rs + Gas Fees" : "Use Payment Method"}</Accordion.Header>
+                                        <Accordion.Header className="tree-item"  onClick={handleAccordion}><strong><img style={{ margin: "5px",height:"20px" }} src={dotL} />{accordion === true ? "1 JHINGA ≈ 1 Rs + Gas Fees" : "Use Payment Method"}</strong></Accordion.Header>
                                         <Accordion.Body className="main-body-accordion">
                                             <Accordion.Item eventKey="1">
-                                                <Accordion.Header className="tree-item"><img style={{ margin: "5px",height:"20px" }} src={dotL} />See Calculation</Accordion.Header>
+                                                <Accordion.Header className="tree-item" style={{marginLeft:"-19px"}} onClick={handleAccordion1}><strong><img style={{ margin: "5px",height:"20px" }} src={dotL} />{accordion1 === false ? "See Calculation" : "Hide calculation"}</strong></Accordion.Header>
                                                 <Accordion.Body>
-                                                    <p className="tree-item" style={{ Color: "grey" }}><img style={{ margin: "5px" }} src={dot} />0.3% Blockchain Fee</p>
-                                                    <p className="tree-item" style={{ Color: "grey" }}><img style={{ margin: "5px" }} src={dot} />0.2% Convenience Fee</p>
+                                                    <p className="tree-item" style={{ color: "#C4C4C4", marginLeft:"-14px" }}><img style={{ margin: "5px" }} src={dot} />0.3% Blockchain Fee</p>
+                                                    <p className="tree-item" style={{ color: "#C4C4C4",marginLeft:"-14px" }}><img style={{ margin: "5px" }} src={dot} />0.2% Convenience Fee</p>
                                                 </Accordion.Body>
                                             </Accordion.Item>
-                                            <p className="tree-item"><img style={{ margin: "5px",height:"20px" }} src={dotL} />1.05 Rs <p style={{ Color: "grey" }}>Total Fees</p></p>
-                                            <p className="tree-item"><img style={{ margin: "5px",height:"20px" }} src={dotL} />1 JHINGA ≈ 1 Rs + Gas Fees <p style={{ Color: "grey" }}>Rate</p></p>
+                                            <p className="tree-item"><img style={{ margin: "5px",height:"20px" }} src={dotL} />1.05 Rs <p style={{ color: "#C4C4C4",marginLeft:"30px" }}>Total Fees</p></p>
+                                            <p className="tree-item"><img style={{ margin: "5px",height:"20px" }} src={dotL} /><strong>1 JHINGA ≈ 1 Rs + Gas Fees </strong><p style={{ color: "#C4C4C4", marginLeft:"30px" }}>Rate</p></p>
 
                                         </Accordion.Body>
                                     </Accordion.Item>
@@ -205,7 +215,7 @@ const Swap = () => {
                                 <input type="number" className="input-launch" style={{ width: "100%", height: "3.5em", color: '#e9ecef' }} placeholder="Recieve" />
                             </Col>
                             <Col style={{ backgroundColor: "#f7f7f7", maxHeight: "4.5em", borderTopRightRadius: "10px", borderBottomRightRadius: "10px" }} md={3}>
-                                <p style={{ margin: "8px 0px", paddingTop: '17px' }}>{tradeType === "buy" ? <div style={{ display: "flex", maxHeight: "2.5em" }}><img style={{ height: "1.5em" }} src={jhinga} /><p>JHINGA</p> </div> : <button className="selectToken" style={{ display: "contents" }} variant="primary" onClick={handleShow1} ><div>{token === null ? '' : token}<img style={{ padding: "0 5px", height: "0.5em" }} src={DropdownImg} /></div></button>}</p>
+                                <p style={{ margin: "8px 0px", paddingTop: '17px' }}>{tradeType === "buy" ? <div style={{ display: "flex", maxHeight: "2.5em" }}><img style={{ height: "1.5em" }} src={jhinga} /><strong><p>JHINGA</p></strong> </div> : <button className="selectToken" style={{ display: "contents" }} variant="primary" onClick={handleShow1} ><div>{token === null ? '' : token}<img style={{ padding: "0 5px", height: "0.5em" }} src={DropdownImg} /></div></button>}</p>
                             </Col>
 
                         </Row>
@@ -299,17 +309,17 @@ const Swap = () => {
                             </div>
                             <div className="wrapper">
 
-                                <div className="SwapItem2 " style={{}}>
+                                <div className="SwapItem2 " style={{backgroundColor:"#D5FFF0"}}>
                                     <div style={{ display: "flex" }}>
                                         <img style={{ height: "1.5em", margin: "0px 7px" }} src={usdtImg} /> <p onClick={() => setToken("USDT")} style={{ margin: "2px", color:"#4FA183"}}>USDT</p>
                                     </div>
                                 </div>
-                                <div className="SwapItem2">
+                                <div className="SwapItem2" style={{backgroundColor:"#C9DBEE"}}>
                                     <div style={{ display: "flex" }}>
                                         <img style={{ height: "1.5em", margin: "0px 7px" }} src={usdcImg} /> <p onClick={() => setToken('USDC')} style={{ margin: "2px", color:"#3275C6" }}>USDC</p>
                                     </div>
                                 </div>
-                                <div className="SwapItem2">
+                                <div className="SwapItem2" style={{backgroundColor:"#FEEEC9"}}>
                                     <div style={{ display: "flex" }}>
                                         <img style={{ height: "1.5em", margin: "0px 7px" }} src={busdImg} /> <p onClick={() => setToken('BUSD')} style={{ margin: "2px", color:"#EEA92C" }}>BUSD</p>
                                     </div>
@@ -359,17 +369,17 @@ const Swap = () => {
                             </div>
                             <div className="wrapper">
 
-                                <div className="SwapItem2">
+                                <div className="SwapItem2" style={{backgroundColor:"#FDD9C7"}}>
                                     <div style={{ display: "flex" }}>
                                         <img style={{ height: "1.5em", margin: "0px 7px" }} src={ManaImg} /> <p onClick={() => setToken('MANA')} style={{ margin: "2px", color:"#DD2975" }}>MANA</p>
                                     </div>
                                 </div>
-                                <div className="SwapItem2">
+                                <div className="SwapItem2" style={{backgroundColor:"#C5E0FD"}}>
                                     <div style={{ display: "flex" }}>
                                         <img style={{ height: "1.5em", margin: "0px 7px" }} src={apecoin} /> <p onClick={() => setToken('APE')} style={{ margin: "2px" ,color:"#1143B6"}}>APE</p>
                                     </div>
                                 </div>
-                                <div className="SwapItem2">
+                                <div className="SwapItem2" style={{backgroundColor:"#CBE3EC"}}>
                                     <div style={{ display: "flex" }}>
                                         <img style={{ height: "1.5em", margin: "0px 7px" }} src={sandImg} /> <p onClick={() => setToken('SAND')} style={{ margin: "2px",color:"#00A1F3"}}>SAND</p>
                                     </div>
@@ -414,17 +424,17 @@ const Swap = () => {
                             </div>
                             <div className="wrapper">
 
-                                <div className="SwapItem2">
+                                <div className="SwapItem2" style={{backgroundColor:"#FEE8D6"}}>
                                     <div style={{ display: "flex" }}>
                                         <img style={{ height: "1.5em", margin: "0px 7px" }} src={wbtcImf} /> <p onClick={() => setToken('WBTC')} style={{ margin: "2px",color:"#EE9956" }}>WBTC</p>
                                     </div>
                                 </div>
-                                <div className="SwapItem2">
+                                <div className="SwapItem2" style={{backgroundColor:"#E1E7FE"}}>
                                     <div style={{ display: "flex" }}>
                                         <img style={{ height: "1.5em", margin: "0px 7px" }} src={etcImg} /> <p onClick={() => setToken('ETH')} style={{ margin: "2px", color: "#4C557B", }}>ETH</p>
                                     </div>
                                 </div>
-                                <div className="SwapItem2">
+                                <div className="SwapItem2" style={{backgroundColor:"#FEEEC9"}}>
                                     <div style={{ display: "flex" }}>
                                         <img style={{ height: "1.5em", margin: "0px 7px" }} src={BNBimg} /> <p onClick={() => setToken('BNB')} style={{ margin: "2px", color: "#EEA92C" }}>BNB</p>
                                     </div>

@@ -1570,7 +1570,7 @@ ul {
 .wrapperItem {
     width: 80px !important;
     height: 30px !important;
-    background-color: rgb(248, 207, 160) !important;
+    background-color: #FDDDBC !important;
     padding: 3px !important;
     margin: 20px;
     border-radius: 12px;
@@ -1580,12 +1580,12 @@ ul {
 .wrapperItem1 {
     width: 80px !important;
     height: 30px !important;
-    background-color: rgba(250, 185, 185, 0.637) !important;
+    background-color: #FDCCD2 !important;
     padding: 3px !important;
     margin: 20px;
     border-radius: 12px;
     font-weight: 600;
-    color: rgb(126, 2, 2);
+    color: #B73648
 }
 
 .wrapperItem1 .p {
@@ -1596,12 +1596,12 @@ ul {
 .wrapperItem2 {
     width: 80px !important;
     height: 30px !important;
-    background-color: rgba(181, 206, 245, 0.637) !important;
+    background-color: #C6D6FA !important;
     padding: 3px !important;
     margin: 20px;
     border-radius: 12px;
     font-weight: 600;
-    color: rgb(46, 46, 139)
+    color: #123294
 }
 
 .wrapperItem3 {
@@ -1614,7 +1614,7 @@ ul {
 }
 
 .icon {
-    color: rgb(243, 111, 63);
+    color: #FB9941;
     justify-content: center;
     font-family: sans-serif;
     font-weight: 600;
@@ -1623,7 +1623,7 @@ ul {
 }
 
 .icon1 {
-    color: rgb(126, 2, 2);
+    color: #BC4B5A;
     justify-content: center;
     font-family: sans-serif;
     font-weight: 600;
@@ -1632,7 +1632,7 @@ ul {
 }
 
 .icon2 {
-    color: rgb(46, 46, 139);
+    color: #2A4BA1;
     justify-content: center;
     font-family: sans-serif;
     font-weight: 600;
@@ -1641,7 +1641,7 @@ ul {
 }
 
 .icon3 {
-    color: rgb(206, 38, 38);
+    color:#CA112D;
     max-width: 200px;
     justify-content: end;
     font-family: sans-serif;
@@ -1792,7 +1792,7 @@ ul {
 .SwapItem2 {
     width: 100px !important;
     height: 37px !important;
-    background-color: rgb(246, 221, 175) !important;
+    background-color: rgb(246, 221, 175);
     padding: 4px 0px !important;
     margin: 20px;
     border-radius: 18px;
@@ -1929,5 +1929,8 @@ ul.tree>li:first-child::after {
     font-family: system-ui;
     font-size: 17px;
     color: lightgrey;
-
+}
+.tree-item {
+    display:flex;
+    color:"#C4C4C4"
 }

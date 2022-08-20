@@ -24,6 +24,8 @@ import binance from "../../Assets1/Path.png"
 import jhinga from "../../Assets1/jhinga.png";
 import Payment from "../../Assets1/payment.png";
 import { BsChevronLeft } from "react-icons/bs";
+import dotL from '../../Assets1/Ellipse.png';
+import dot from '../../Assets1/Ellipse_s.png';
 
 import {
     Container,
@@ -48,6 +50,7 @@ const Launch = () => {
     const [showtab, setShowTab] = useState(1);
     const [currentVal, setCurrentVal] = useState("");
     const [accordion, setAccordion] = useState(false);
+    const [accordion1, setAccordion1] = useState(false);
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -63,6 +66,14 @@ const Launch = () => {
             setAccordion(false);
         } else {
             setAccordion(true);
+        }
+    }
+
+    function handleAccordion1() {
+        if (accordion1 === true) {
+            setAccordion1(false);
+        } else {
+            setAccordion1(true);
         }
     }
 
@@ -142,17 +153,17 @@ const Launch = () => {
                             <Accordion style={{ paddingBottom: "10px" }} defaultActiveKey={['0']} alwaysOpen id="1" >
                                 <Accordion.Item eventKey="0" style={{borderLeft: '1px solid gray'}}>
                                     {/* <Accordion.Header>1 JHINGA ≈ 1 Rs + Gas Fees</Accordion.Header> */}
-                                    <Accordion.Header onClick={handleAccordion} >{accordion === true ? "1 JHINGA ≈ 1 Rs + Gas Fees" : "Use Payment Method"}</Accordion.Header>
+                                    <Accordion.Header onClick={handleAccordion} ><strong><img style={{ margin: "5px",height:"20px" }} src={dotL} />{accordion === true ? "1 JHINGA ≈ 1 Rs + Gas Fees" : "Use Payment Method"}</strong></Accordion.Header>
                                     <Accordion.Body>
                                         <Accordion.Item eventKey="1">
-                                            <Accordion.Header >See Calculation</Accordion.Header>
+                                            <Accordion.Header style={{marginLeft:"-18px"}} onClick={handleAccordion1}><strong><img style={{ margin: "5px",height:"20px" }} src={dotL} />{accordion1 === false ? "See Calculation" : "Hide Calculation"}</strong></Accordion.Header>
                                             <Accordion.Body>
-                                                <li style={{ Color: "grey" }}>0.3% Blockchain Fee</li>
-                                                <li style={{ Color: "grey" }}>0.2% Convenience Fee</li>
+                                                <p style={{ Color: "#C4C4C4", marginLeft:"-14px" }}><img style={{ margin: "5px" }} src={dot} />0.3% Blockchain Fee</p>
+                                                <p style={{ Color: "#C4C4C4", marginLeft:"-14px" }}><img style={{ margin: "5px" }} src={dot} />0.2% Convenience Fee</p>
                                             </Accordion.Body>
                                         </Accordion.Item>
-                                        <li>1.05 Rs <p style={{ Color: "grey" }}>Total Fees</p></li>
-                                        <li>1 JHINGA ≈ 1 Rs + Gas Fees <p style={{ Color: "grey" }}>Rate</p></li>
+                                        <li className="tree-item"><img style={{ margin: "5px",height:"20px" }}src={dotL} />1.05 Rs <p style={{ Color: "#C4C4C4", marginLeft:"30px" }}>Total Fees</p></li>
+                                        <li className="tree-item"><img style={{ margin: "5px",height:"20px" }}src={dotL} /><strong>1 JHINGA ≈ 1 Rs + Gas Fees</strong> <p style={{ Color: "#C4C4C4",marginLeft:"30px" }}>Rate</p></li>
 
                                     </Accordion.Body>
                                 </Accordion.Item>
@@ -170,7 +181,7 @@ const Launch = () => {
                                 <input type="number" className="input-launch" style={{ width: "100%", height: "3.5em", color: '#e9ecef' }} placeholder="Recieve" />
                             </Col>
                             <Col style={{ backgroundColor: "#f7f7f7", maxHeight: "4.5em", borderTopRightRadius: "10px", borderBottomRightRadius: "10px" }} md={3}>
-                                <p style={{ margin: "8px 0px", paddingTop: '17px' }}>{tradeType === "buy" ? <div style={{ display: "flex", maxHeight: "2.5em" }}><img style={{ height: "1.5em" }} src={jhinga} /><p>JHINGA</p> </div> : <button className="selectToken" style={{ display: "contents" }} variant="primary" onClick={handleShow} ><div>{token === null ? '' : token}<img style={{ padding: "0 5px", height: "0.5em" }} src={DropdownImg} /></div></button>}</p>
+                                <p style={{ margin: "8px 0px", paddingTop: '17px' }}>{tradeType === "buy" ? <div style={{ display: "flex", maxHeight: "2.5em" }}><img style={{ height: "1.5em" }} src={jhinga} /> <strong><p>JHINGA</p> </strong> </div> : <button className="selectToken" style={{ display: "contents" }} variant="primary" onClick={handleShow} ><div>{token === null ? '' : token}<img style={{ padding: "0 5px", height: "0.5em" }} src={DropdownImg} /></div></button>}</p>
                             </Col>
 
                         </Row>
