@@ -88,7 +88,7 @@ const Launch = () => {
     return (
         <section className="launchPage" style={{ paddingTop: "150px" }}>
             <div style={{ display: "flex", alignItems: "center" }}>
-                <h1 style={{ left: "40%", position: "relative" }}>Primary Market</h1>
+                <h1 style={{ left: "40%", position: "relative" }}><strong>Primary Market</strong></h1>
                 <div style={{ left: "60%", position: "relative" }}>
                     <Dropdown as={ButtonGroup}>
                         {/* <DropdownToggle menuAlign="left" split /> */}
@@ -146,25 +146,25 @@ const Launch = () => {
                                 <p style={{ margin: "8px 0px" }}>{tradeType === "buy" ? <button className="selectToken" style={{ display: "contents" }} variant="primary" onClick={handleShow} ><div>{token === null ? '' : token}<img style={{ padding: "0 5px", height: "0.5em" }} src={DropdownImg} /></div></button> : <div style={{ display: "flex", maxHeight: "2.5em" }}><img style={{ height: "1.5em" }} src={jhinga} /><p>JHINGA</p> </div>}</p>
                             </Col>
                         </Row>
+                        
                         <Row class="form-input" style={{ textAlign: "left", width: "100%" }}>
-
                             <Col md={9}>
 
-                            <Accordion style={{ paddingBottom: "10px" }} defaultActiveKey={['0']} alwaysOpen id="1" >
-                                <Accordion.Item eventKey="0" style={{borderLeft: '1px solid gray'}}>
+                            <Accordion style={{ paddingBottom: "10px" }} defaultActiveKey={['0']}  >
+                                <Accordion.Item eventKey="0" >
                                     {/* <Accordion.Header>1 JHINGA ≈ 1 Rs + Gas Fees</Accordion.Header> */}
-                                    <Accordion.Header onClick={handleAccordion} ><strong><img style={{ margin: "5px",height:"20px" }} src={dotL} />{accordion === false ? "1 JHINGA ≈ 1 Rs + Gas Fees " : "Use Payment Method"}</strong></Accordion.Header>
+                                    <Accordion.Header onClick={handleAccordion} ><strong><img style={{ margin: "5px",height:"16px" }} src={dotL} />{accordion === false ? "1 JHINGA ≈ 1 Rs + Gas Fees " : "Use Payment Method"}</strong></Accordion.Header>
                                     
                                     <Accordion.Body>
                                         <Accordion.Item eventKey="1">
-                                            <Accordion.Header style={{marginLeft:"-18px"}} onClick={handleAccordion1}><strong><img style={{ margin: "5px",height:"20px" }} src={dotL} />{accordion1 === false ? "See Calculation" : "Hide Calculation"}</strong></Accordion.Header>
+                                            <Accordion.Header style={{marginLeft:"-18px"}} onClick={handleAccordion1}><strong><img style={{ margin: "5px",height:"16px" }} src={dotL} />{accordion1 === false ? "See Calculation" : "Hide Calculation"}</strong></Accordion.Header>
                                             <Accordion.Body>
-                                                <p style={{ color: "#C4C4C4", marginLeft:"-14px" }}><img style={{ margin: "5px" }} src={dot} />0.3% Blockchain Fee</p>
-                                                <p style={{ color: "#C4C4C4", marginLeft:"-14px" }}><img style={{ margin: "5px" }} src={dot} />0.2% Convenience Fee</p>
+                                                <p style={{ color: "#C4C4C4", marginLeft:"-14px" }}><img style={{ margin: "5px",height:"12px" }} src={dot} />0.3% Blockchain Fee</p>
+                                                <p style={{ color: "#C4C4C4", marginLeft:"-14px" }}><img style={{ margin: "5px",height:"12px" }} src={dot} />0.2% Convenience Fee</p>
                                             </Accordion.Body>
                                         </Accordion.Item>
-                                        <li className="tree-item"><img style={{ margin: "5px",height:"20px" }}src={dotL} />1.05 Rs <p style={{ color: "#C4C4C4", marginLeft:"30px" }}>Total Fees</p></li>
-                                        <li className="tree-item"><img style={{ margin: "5px",height:"20px" }}src={dotL} /><strong>1 JHINGA ≈ 1 Rs + Gas Fees</strong> <p style={{ color: "#C4C4C4",marginLeft:"30px" }}>Rate</p></li>
+                                        <li className="tree-item"><img style={{ margin: "5px",height:"16px" }}src={dotL} />1.05 Rs <p style={{ color: "#C4C4C4", marginLeft:"30px" }}>Total Fees</p></li>
+                                        <li className="tree-item"><img style={{ margin: "5px",height:"16px" }}src={dotL} /><strong>1 JHINGA ≈ 1 Rs + Gas Fees</strong> <p style={{ color: "#C4C4C4",marginLeft:"30px" }}>Rate</p></li>
 
                                     </Accordion.Body>
                                 </Accordion.Item>

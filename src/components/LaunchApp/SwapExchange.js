@@ -112,7 +112,7 @@ const Swap = () => {
     return (
         <section className="launchPage" style={{ paddingTop: "150px" }}>
             <div style={{ display: "flex", alignItems: "center" }}>
-                <h1 style={{ left: "40%", position: "relative" }}>Swap Exchange</h1>
+                <h1 style={{ left: "40%", position: "relative" }}><strong>Swap Exchange</strong></h1>
                 <div style={{ left: "60%", position: "relative" }}>
                     <Dropdown as={ButtonGroup}>
                         {/* <DropdownToggle menuAlign="left" split /> */}
@@ -141,9 +141,9 @@ const Swap = () => {
 
 
                     <nav className="launch-nav btn" style={{ color: "grey", display: "flex", justifyContent: "space-around", margin: "auto" }}>
-                        <div> <p style={{ margin: "10px 0px" }} className={`launch-nav-item ${tradeType === "buy" ? "Mint-btn" : ""}`} onClick={() => settradeType("buy")}>MINT</p></div>
+                        <div> <p style={{ margin: "10px 0px" }} className={`launch-nav-item ${tradeType === "buy" ? "Mint-btn" : ""}`} onClick={() => settradeType("buy")}>BUY</p></div>
                         <div className="partition" />
-                        <div> <p style={{ margin: "10px 0px" }} className={`launch-nav-item ${tradeType === "sell" ? "Burn-btn" : ""}`} onClick={() => settradeType("sell")}>BURN</p></div>
+                        <div> <p style={{ margin: "10px 0px" }} className={`launch-nav-item ${tradeType === "sell" ? "Burn-btn" : ""}`} onClick={() => settradeType("sell")}>SELL</p></div>
                     </nav>
 
                     {/* Mint tab start */}
@@ -152,19 +152,19 @@ const Swap = () => {
                             <Button
                                 // className={toggleState === 1 ? "btn-primary" : "btn-inactive"} 
                                 className="btn-inactive"
-                                onClick={() => toggleTab(1)} className="CoinSelectButton"
+                                onClick={() => toggleTab(1)} className="CoinSelectButton" style={{fontSize:"19px", borderRadius:"12px"}}
                             >
                                 Stablecoin
                             </Button>
                             <Button
                                 // className={toggleState === 2 ? "btn-primary" : "btn-inactive"} 
-                                onClick={() => toggleTab(2)} className="CoinSelectButton"
+                                onClick={() => toggleTab(2)} className="CoinSelectButton" style={{fontSize:"19px", borderRadius:"12px"}}
                             >
                                 Metaverse
                             </Button>
                             <Button
                                 className={toggleState === 3 ? "btn-primary" : "btn-inactive"}
-                                onClick={() => toggleTab(3)} className="CoinSelectButton"
+                                onClick={() => toggleTab(3)} className="CoinSelectButton"style={{fontSize:"19px", borderRadius:"12px"}}
                             >
                                 Cryptocurrency
                             </Button>
@@ -179,31 +179,30 @@ const Swap = () => {
                                 <p style={{ margin: "8px 0px" }}>{tradeType === "buy" ? <button className="selectToken" style={{ display: "contents" }} variant="primary" onClick={handleShow1} ><div>{token === null ? '' : token}<img style={{ padding: "0 5px", height: "0.5em" }} src={DropdownImg} /></div></button> : <div style={{ display: "flex", maxHeight: "2.5em" }}><img style={{ height: "1.5em" }} src={jhinga} /><p>JHINGA</p> </div>}</p>
                             </Col>
                         </Row>
-                        <Row class="form-input" style={{ textAlign: "left"}}>
-
-
-                        <Col md={9}>
-                            <Accordion style={{ paddingBottom: "10px" }} defaultActiveKey={['0']} alwaysOpen id="1">
+                        
+                        <Row class="form-input" style={{ textAlign: "left", width: "100%"}}>
+                        <Col md={9} >
+                            <Accordion  style={{ paddingBottom: "10px" }} defaultActiveKey={['0']} alwaysOpen id="1">
                                     <Accordion.Item className="tree" eventKey="0">
                                         {/* <Accordion.Header>1 JHINGA ≈ 1 Rs + Gas Fees</Accordion.Header> */}
-                                        <Accordion.Header className="tree-item"  onClick={handleAccordion}><strong><img style={{ margin: "5px",height:"20px" }} src={dotL} />{accordion === true ? "1 JHINGA ≈ 1 Rs + Gas Fees" : "Use Payment Method"}</strong></Accordion.Header>
+                                        <Accordion.Header className="tree-item"  onClick={handleAccordion}><strong><img style={{ margin: "5px",height:"16px" }} src={dotL} />{accordion === true ? "1 JHINGA ≈ 1 Rs + Gas Fees" : "Use Payment Method"}</strong></Accordion.Header>
                                         <Accordion.Body className="main-body-accordion">
                                             <Accordion.Item eventKey="1">
-                                                <Accordion.Header className="tree-item" style={{marginLeft:"-19px"}} onClick={handleAccordion1}><strong><img style={{ margin: "5px",height:"20px" }} src={dotL} />{accordion1 === false ? "See Calculation" : "Hide calculation"}</strong></Accordion.Header>
+                                                <Accordion.Header className="tree-item" style={{marginLeft:"-19px"}} onClick={handleAccordion1}><strong><img style={{ margin: "5px",height:"16px" }} src={dotL} />{accordion1 === false ? "See Calculation" : "Hide calculation"}</strong></Accordion.Header>
                                                 <Accordion.Body>
-                                                    <p className="tree-item" style={{ color: "#C4C4C4", marginLeft:"-14px" }}><img style={{ margin: "5px" }} src={dot} />0.3% Blockchain Fee</p>
-                                                    <p className="tree-item" style={{ color: "#C4C4C4",marginLeft:"-14px" }}><img style={{ margin: "5px" }} src={dot} />0.2% Convenience Fee</p>
+                                                    <p className="tree-item" style={{ color: "#C4C4C4", marginLeft:"-14px" }}><img style={{ margin: "5px", height:"12px" }} src={dot} />0.3% Blockchain Fee</p>
+                                                    <p className="tree-item" style={{ color: "#C4C4C4",marginLeft:"-14px" }}><img style={{ margin: "5px",height:"12px" }} src={dot} />0.2% Convenience Fee</p>
                                                 </Accordion.Body>
                                             </Accordion.Item>
-                                            <p className="tree-item"><img style={{ margin: "5px",height:"20px" }} src={dotL} />1.05 Rs <p style={{ color: "#C4C4C4",marginLeft:"30px" }}>Total Fees</p></p>
-                                            <p className="tree-item"><img style={{ margin: "5px",height:"20px" }} src={dotL} /><strong>1 JHINGA ≈ 1 Rs + Gas Fees </strong><p style={{ color: "#C4C4C4", marginLeft:"30px" }}>Rate</p></p>
+                                            <p className="tree-item"><img style={{ margin: "5px",height:"16px" }} src={dotL} />1.05 Rs <p style={{ color: "#C4C4C4",marginLeft:"30px" }}>Total Fees</p></p>
+                                            <p className="tree-item"><img style={{ margin: "5px",height:"16px" }} src={dotL} /><strong>1 JHINGA ≈ 1 Rs + Gas Fees </strong><p style={{ color: "#C4C4C4", marginLeft:"30px" }}>Rate</p></p>
 
                                         </Accordion.Body>
                                     </Accordion.Item>
                                    
                                 </Accordion>
                                 </Col>
-                            <Col md={3}>
+                            <Col md={3} >
                             <div className="payment-item">
                                 <p><BsChevronLeft/> Payments <img style={{marginLeft:"1.7px"}}src={Payment} /></p>
                             </div>
