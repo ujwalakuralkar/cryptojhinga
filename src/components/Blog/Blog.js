@@ -10,16 +10,16 @@ function Blog() {
 
         </div>
         <div className="blog-btn">
-            <div classname="blog-btn1">
+            <div className="blog-btn1">
                 <p>Trading</p>
             </div>
-            <div classname="blog-btn2">
+            <div className="blog-btn2">
                 <p>Essentials</p>
             </div>
-            <div classname="blog-btn3">
+            <div className="blog-btn3">
                 <p>Jhinga</p>
             </div>
-            <div classname="blog-btn4">
+            <div className="blog-btn4">
                 <p>Tutorials</p>
             </div>
             

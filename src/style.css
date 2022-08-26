@@ -1954,7 +1954,27 @@ ul.tree>li:first-child::after {
    
 }
 .blog-btn1 {
-    height:10px;
-    width:50px;
-    background-color: tomato;
+    height:30px;
+    width:90px;
+    background-color: orange;
+    border-radius:10px ;
+}
+
+.blog-btn2 {
+    height:30px;
+    width:90px;
+    background-color: orange;
+    border-radius:10px ;
+}
+.blog-btn3 {
+    height:30px;
+    width:90px;
+    background-color: orange;
+    border-radius:10px ;
+}
+.blog-btn4 {
+    height:30px;
+    width:90px;
+    background-color: orange;
+    border-radius:10px ;
 }
