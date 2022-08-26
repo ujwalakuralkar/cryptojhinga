@@ -1936,3 +1936,25 @@ ul.tree>li:first-child::after {
     display:flex;
     color:"#C4C4C4"
 }
+.Box1 {
+    height:400px;
+    width:850px;
+    background-color: white;
+    border:1px solid black;
+    border-radius: 7px;
+    box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137)
+}
+.blogPage {
+    margin-top: 150px;
+    text-align: left;
+}
+.blog-btn {
+    display: flex;
+    margin:20px;
+   
+}
+.blog-btn1 {
+    height:10px;
+    width:50px;
+    background-color: tomato;
+}
