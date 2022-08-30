@@ -131,13 +131,16 @@ function Blog() {
                 <p style={{marginTop:"50px"}}>2.Think about the liquidity of the asset you're trading. </p>
                 <p style={{marginTop:"50px"}}>3.Use the technical analysisto determine price levels. </p>
                 <p style={{marginTop:"50px"}}>If you are not sure what support and resistance levels are,</p>
-                
+
+                </div> 
                 <div className="blog-close">
-                    <h3 style={{marginLeft:"200px", marginTop:"90px",paddingTop:"100px"}}><strong>Closing Thoughts</strong></h3>
-                    <p style={{marginTop:"50px",marginLeft:"200px"}}>A stop-limit order is a powerful tool that can provide you more trading capability than simple market orders.</p>
+                    <div className="para2">
+                        <h3 style={{marginLeft:"200px", marginTop:"90px",paddingTop:"100px"}}><strong>Closing Thoughts</strong></h3>
+                        <p style={{marginTop:"50px",marginLeft:"200px"}}>A stop-limit order is a powerful tool that can provide you more trading capability than simple market orders.</p>
+                    </div>
                 </div>
                 <h1 style={{marginLeft:"200px", marginTop:"90px",paddingTop:"100px"}}><strong>More Articles</strong></h1>
-        </div>
+        
 
     </div>
     )
