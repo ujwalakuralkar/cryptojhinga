@@ -122,12 +122,18 @@ function Blog() {
             <p style={{marginTop:"50px"}}> Stop-limit orders share the same disdvantages as limit orders,</p>
             <p style={{marginTop:"50px"}}> Liquidity can also be a problem if there aren't enough takers to fill your order.</p>
 
-        </div>
-
-        <div >
+            <h3 style={{marginLeft:"-0px", marginTop:"90px"}}><strong>Strategies for placing stop-limit orders</strong></h3>
+        
+                <p style={{marginTop:"50px"}}>Now we've studied stop-limit orders, what's the best way to use them?</p>
+                <p style={{marginTop:"50px",marginLeft:""}}> 1.Study the volatility of the asset you're placing a stop-limit order on.</p>
+                <p style={{marginTop:"50px"}}>2.Think about the liquidity of the asset you're trading. </p>
+                <p style={{marginTop:"50px"}}>3.Use the technical analysisto determine price levels. </p>
+                <p style={{marginTop:"50px"}}>If you are not sure what support and resistance levels are,</p>
             
+                <h3 style={{marginLeft:"-0px", marginTop:"90px"}}><strong>Closing Thoughts</strong></h3>
+                <p style={{marginTop:"50px"}}>A stop-limit order is a powerful tool that can provide you more trading capability than simple market orders.</p>
+          
         </div>
-
 
     </div>
     )
