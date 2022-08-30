@@ -1953,6 +1953,7 @@ ul.tree>li:first-child::after {
 .blog-head{
     position: relative;
     right:200px;
+    background-color:#FFFDFA ;
    
 }
 
@@ -2033,4 +2034,25 @@ h4 {
     background-color: white;
     margin-top: 50px;
 }
-
+.blog-background{
+    position: relative;
+    z-index: -1;
+    background-image: url(./Assets/Rectangle_168@2x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    height:"100%";
+    width:100%;
+}
+.blog-close{
+    height:450px;
+    width:100%;
+    position: relative;
+    z-index: -1;
+    background-image: url(./Assets/Rectangle_143@2x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:left;
+    left:-200px;
+    background-color:#FFFBF4;
+}

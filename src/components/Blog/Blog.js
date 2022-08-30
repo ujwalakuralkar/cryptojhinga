@@ -5,14 +5,15 @@ import React from "react";
 function Blog() {
     return (
     <div className="blogPage" >
-        <div className="blog-head">
+        <div className="blog-background">
+            <div className="blog-head">
             <h1><strong> What is a Stop-Limit Order?</strong> </h1>
             <p style={{marginRight:"150px",marginTop:"15px"}}>Published Dec 9, 2018 <span style={{marginLeft:"30px"}}>Updated Jun 29, 2022</span> </p>
-        </div>
-        <div className="Box1">
+            </div>
+            <div className="Box1">
 
-        </div>
-        <div className="blog-btn">
+            </div>
+            <div className="blog-btn">
             <div className="blog-btn1">
                 <p style={{marginTop:"4px"}}>Trading</p>
             </div>
@@ -26,6 +27,7 @@ function Blog() {
                 <p style={{marginTop:"4px"}}>Tutorials</p>
             </div>
             
+            </div>
         </div>
 
         <div style={{marginTop:"80px"}}>
@@ -129,10 +131,12 @@ function Blog() {
                 <p style={{marginTop:"50px"}}>2.Think about the liquidity of the asset you're trading. </p>
                 <p style={{marginTop:"50px"}}>3.Use the technical analysisto determine price levels. </p>
                 <p style={{marginTop:"50px"}}>If you are not sure what support and resistance levels are,</p>
-            
-                <h3 style={{marginLeft:"-0px", marginTop:"90px"}}><strong>Closing Thoughts</strong></h3>
-                <p style={{marginTop:"50px"}}>A stop-limit order is a powerful tool that can provide you more trading capability than simple market orders.</p>
-          
+                
+                <div className="blog-close">
+                    <h3 style={{marginLeft:"200px", marginTop:"90px",paddingTop:"100px"}}><strong>Closing Thoughts</strong></h3>
+                    <p style={{marginTop:"50px",marginLeft:"200px"}}>A stop-limit order is a powerful tool that can provide you more trading capability than simple market orders.</p>
+                </div>
+                <h1 style={{marginLeft:"200px", marginTop:"90px",paddingTop:"100px"}}><strong>More Articles</strong></h1>
         </div>
 
     </div>
